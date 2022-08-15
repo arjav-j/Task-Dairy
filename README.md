@@ -2,7 +2,7 @@
 a node mongo app to store and manage tasks
 
 
-to run:
+# To Run:
 
 1. Build the app.
 2. Go to 'localhost:3000' to run the app.
