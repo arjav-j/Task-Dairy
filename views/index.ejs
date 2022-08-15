@@ -1,0 +1,29 @@
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+
+<body>
+  <%- include("./partials/nav.ejs") %>
+
+  <div class="tasks content">
+    <h2>Tasks</h2>
+       
+    <% let d; 
+    if (tasks.length > 0) { %>
+      <% tasks.forEach(task => { 
+        d = task.taskDate.toString(); d = d.slice(0,15) %>
+        <a class="single" href="/tasks/<%= task._id %>">
+          <h3 class="title"><%= task.taskTitle %></h3>
+          <p class="details"><%= d %><br><%= task.taskStatus %></p>
+        </a>
+      <% }) %>
+  </div>
+  <div class ="empty">
+      <% } else { %>
+      <a class ="empty" href="/tasks/create"><p class="empty">No Tasks, CREATE ONE?</p></a>
+    <% } %>
+  </div>
+  
+
+  <%- include("./partials/footer.ejs") %>
+</body>
+</html>

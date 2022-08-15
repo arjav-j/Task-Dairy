@@ -1,0 +1,26 @@
+{
+  "name": "dairy",
+  "version": "1.0.0",
+  "description": "a task notebook",
+  "main": "app.js",
+  "scripts": {
+    "test": "nodemon test.js",
+    "run": "nodemon app.js"
+  },
+  "keywords": [
+    "dairy",
+    "tasks",
+    "task",
+    "note",
+    "notes",
+    "notebook"
+  ],
+  "author": "Arjav Jain",
+  "license": "ISC",
+  "dependencies": {
+    "dayjs": "^1.11.5",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "mongoose": "^6.5.2"
+  }
+}

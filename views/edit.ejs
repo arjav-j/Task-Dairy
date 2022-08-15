@@ -1,0 +1,29 @@
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+
+<body>
+  <%- include("./partials/nav.ejs") %>
+  <div class="create-task content">
+    <form action="/tasks/<%= task._id %>" method="post">
+      <label for="taskTitle">Task title:</label>
+        <input type="text" id="taskTitle" name="taskTitle" value="<%= task.taskTitle %>" required>
+      <label for="taskDes">Task Description:</label>
+        <textarea id="taskDes" name="taskDes"><%= task.taskDes %></textarea>
+      <label for="taskStatus">Task status:</label>
+        <select id="taskStatus" name="taskStatus" required >
+          <option value="<%= task.taskStatus %>" selected><%= task.taskStatus %></option>
+          <option value="pending">Pending</option>
+          <option value="active">Active</option>
+          <option value="completed">Completed</option>
+        </select>
+      <label for="taskDate">Task Date:</label>
+      <input type="date" id="taskDate" name="taskDate" required>
+      <button class="update">Submit</button>
+    </form>
+  </div>
+
+  <%- include("./partials/footer.ejs") %>
+
+
+</body>
+</html>
